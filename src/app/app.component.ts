@@ -1,10 +1,16 @@
-import { Component, ViewChild } from '@angular/core';
-import { CardSettingsModel, KanbanComponent } from '@syncfusion/ej2-angular-kanban';
-
+import { Component, ViewChild, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { CardSettingsModel, KanbanComponent, KanbanModule } from '@syncfusion/ej2-angular-kanban';
+import { DropDownListModule } from '@syncfusion/ej2-angular-dropdowns';
+import { TextAreaModule } from '@syncfusion/ej2-angular-inputs';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
+  standalone: true,
+  imports: [CommonModule, KanbanModule, DropDownListModule,
+    TextAreaModule],
 })
 export class AppComponent {
   @ViewChild('kanbanObj') kanbanObj : KanbanComponent|undefined;

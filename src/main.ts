@@ -1,10 +1,6 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
 
-import { AppModule } from './app/app.module';
-
-import {registerLicense} from '@syncfusion/ej2-base';
-registerLicense("Ngo9BigBOggjHTQxAR8/V1NAaF5cWWJCf0x3Rnxbf1x0ZFFMYFxbRXBPMyBoS35RdURhWHZecndXQmRUVEJ3");
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
+bootstrapApplication(AppComponent)
   .catch(err => console.error(err));
